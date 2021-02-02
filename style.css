@@ -1,0 +1,106 @@
+h3 {
+  color: red;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+}
+
+.left-side {
+  background-color: azure;
+  margin: 5px;
+  padding: 10px;
+  width: 250px;
+}
+
+.main-map {
+  background-color: azure;
+  margin: 5px;
+  padding: 10px;
+  flex: 1 1 100%;
+}
+
+.city-list {
+  height: 20vh;
+  min-height: 200px;
+  list-style: none;
+  padding-left: 0;
+  overflow-y: scroll;
+}
+
+.selected-region {
+  position: relative;
+}
+.selected-region__current-city {
+  background-color: #d6eae9;
+  margin-bottom: 20px;
+}
+
+.selected-region__current-city.active {
+  background-color: lightseagreen;
+}
+
+.selected-region__city {
+  padding: 5px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+.selected-region__list > .selected-region__city {
+  background-color: lightblue;
+}
+
+.selected-region__city-name {
+  margin: 0;
+}
+
+.selected-region__city-region {
+  margin: 0;
+}
+
+.selected-region__list {
+  position: absolute;
+  display: none;
+  width: 100%;
+  max-height: 240px;
+  overflow-y: scroll;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.selected-region__list.active {
+  display: block;
+  opacity: 1;
+}
+
+.selected-region__list > .selected-region__city:hover {
+  background: midnightblue;
+  color: white;
+}
+
+.store-list {
+  min-height: 50vh;
+}
+
+.store {
+  margin-bottom: 10px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  background-color: greenyellow;
+}
+
+.store-place,
+.store-address,
+.store-tel,
+.store-pickup,
+.store-shedule-time {
+  margin: 0;
+}
+
+.store-shedule-time {
+  color: gray;
+  font-size: 12px;
+}
